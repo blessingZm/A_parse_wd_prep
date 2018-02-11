@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'ui.ui'
+#
+# Created by: PyQt5 UI code generator 5.6
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.setWindowModality(QtCore.Qt.NonModal)
+        Form.setEnabled(True)
+        Form.resize(854, 364)
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        Form.setFont(font)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("wdp.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Form.setWindowIcon(icon)
+        self.groupBox = QtWidgets.QGroupBox(Form)
+        self.groupBox.setGeometry(QtCore.QRect(10, 20, 171, 71))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.groupBox.setFont(font)
+        self.groupBox.setObjectName("groupBox")
+        self.StSelect = QtWidgets.QComboBox(self.groupBox)
+        self.StSelect.setGeometry(QtCore.QRect(10, 30, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.StSelect.setFont(font)
+        self.StSelect.setObjectName("StSelect")
+        self.groupBox_2 = QtWidgets.QGroupBox(Form)
+        self.groupBox_2.setGeometry(QtCore.QRect(240, 20, 401, 71))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.groupBox_2.setFont(font)
+        self.groupBox_2.setObjectName("groupBox_2")
+        self.StratDate = QtWidgets.QDateEdit(self.groupBox_2)
+        self.StratDate.setGeometry(QtCore.QRect(10, 30, 141, 31))
+        self.StratDate.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2099, 12, 31), QtCore.QTime(23, 59, 59)))
+        self.StratDate.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(1950, 1, 1), QtCore.QTime(0, 0, 0)))
+        self.StratDate.setObjectName("StratDate")
+        self.EndDate = QtWidgets.QDateEdit(self.groupBox_2)
+        self.EndDate.setGeometry(QtCore.QRect(230, 30, 151, 31))
+        self.EndDate.setMaximumDateTime(QtCore.QDateTime(QtCore.QDate(2099, 12, 31), QtCore.QTime(23, 59, 59)))
+        self.EndDate.setMinimumDateTime(QtCore.QDateTime(QtCore.QDate(1950, 1, 1), QtCore.QTime(0, 0, 0)))
+        self.EndDate.setObjectName("EndDate")
+        self.label = QtWidgets.QLabel(self.groupBox_2)
+        self.label.setGeometry(QtCore.QRect(160, 40, 41, 16))
+        self.label.setObjectName("label")
+        self.groupBox_3 = QtWidgets.QGroupBox(Form)
+        self.groupBox_3.setGeometry(QtCore.QRect(20, 140, 441, 71))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.groupBox_3.setFont(font)
+        self.groupBox_3.setObjectName("groupBox_3")
+        self.EveryResult = QtWidgets.QRadioButton(self.groupBox_3)
+        self.EveryResult.setGeometry(QtCore.QRect(10, 35, 131, 21))
+        self.EveryResult.setCheckable(True)
+        self.EveryResult.setChecked(True)
+        self.EveryResult.setObjectName("EveryResult")
+        self.AveResult = QtWidgets.QRadioButton(self.groupBox_3)
+        self.AveResult.setGeometry(QtCore.QRect(200, 30, 211, 21))
+        self.AveResult.setObjectName("AveResult")
+        self.ResultBotton = QtWidgets.QPushButton(Form)
+        self.ResultBotton.setGeometry(QtCore.QRect(490, 150, 151, 61))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.ResultBotton.setFont(font)
+        self.ResultBotton.setObjectName("ResultBotton")
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "风向频率玫瑰图 绘制"))
+        self.groupBox.setTitle(_translate("Form", "台站选择"))
+        self.groupBox_2.setTitle(_translate("Form", "时间选择"))
+        self.StratDate.setDisplayFormat(_translate("Form", "yyyy/MM"))
+        self.EndDate.setDisplayFormat(_translate("Form", "yyyy/MM"))
+        self.label.setText(_translate("Form", "——"))
+        self.groupBox_3.setTitle(_translate("Form", "结果类别选择："))
+        self.EveryResult.setText(_translate("Form", "各月结果"))
+        self.AveResult.setText(_translate("Form", "多年平均结果"))
+        self.ResultBotton.setText(_translate("Form", "结果输出"))
+
